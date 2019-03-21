@@ -17,8 +17,8 @@ def main():
     run_test_move_by()
     run_test_get_number_of_moves_made()
     run_test_get_distance_from()
-    # run_test_get_distance_from_start()
-    # run_test_get_distance_traveled()
+    run_test_get_distance_from_start()
+    run_test_get_distance_traveled()
     # run_test_closer_to()
     # run_test_halfway_to()
 
@@ -54,6 +54,8 @@ class Point(object):
         self.x = x
         self.y = y
         self.number_of_moves_made = 0
+        self.start_x = x
+        self.start_y = y
 
     def __repr__(self):
         return 'Point({}, {})'.format(self.x,self.y)
@@ -78,6 +80,12 @@ class Point(object):
     def get_distance_from(self,point):
         distance = math.sqrt((self.x - point.x)**2 + (self.y - point.y)**2)
         return distance
+
+    def get_distance_from_start(self):
+        distance = math.sqrt((self.x - self.start_x)**2 + (self.y - self.start_y)**2)
+        return distance
+
+
 
 def run_test_init():
     """
