@@ -16,7 +16,7 @@ def main():
     run_test_move_to()
     run_test_move_by()
     run_test_get_number_of_moves_made()
-    # run_test_get_distance_from()
+    run_test_get_distance_from()
     # run_test_get_distance_from_start()
     # run_test_get_distance_traveled()
     # run_test_closer_to()
@@ -26,6 +26,8 @@ def main():
 # IMPORTANT:
 #   Your instructor will help you get started on this exercise.
 ###############################################################################
+
+import math
 
 # -----------------------------------------------------------------------------
 # DONE: 2.          With your instructor, READ THE INSTRUCTIONS in
@@ -73,7 +75,9 @@ class Point(object):
     def get_number_of_moves_made(self):
         return self.number_of_moves_made
 
-
+    def get_distance_from(self,point):
+        distance = math.sqrt((self.x - point.x)**2 + (self.y - point.y)**2)
+        return distance
 
 def run_test_init():
     """
