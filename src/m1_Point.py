@@ -51,6 +51,7 @@ class Point(object):
     def __init__(self,x,y):
         self.x = x
         self.y = y
+        self.number_of_moves_made = 0
 
     def __repr__(self):
         return 'Point({}, {})'.format(self.x,self.y)
@@ -61,15 +62,16 @@ class Point(object):
     def move_to(self,x,y):
         self.x = x
         self.y = y
+        self.number_of_moves_made = self.number_of_moves_made + 1
         return self
 
     def move_by(self,dx,dy):
         self.x = self.x + dx
         self.y = self.y + dy
+        self.number_of_moves_made = self.number_of_moves_made + 1
 
-    def
-
-
+    def get_number_of_moves_made(self):
+        return self.number_of_moves_made
 
 
 
