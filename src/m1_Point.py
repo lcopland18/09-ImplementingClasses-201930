@@ -15,7 +15,7 @@ def main():
     run_test_clone()
     run_test_move_to()
     run_test_move_by()
-    # run_test_get_number_of_moves_made()
+    run_test_get_number_of_moves_made()
     # run_test_get_distance_from()
     # run_test_get_distance_from_start()
     # run_test_get_distance_traveled()
@@ -66,6 +66,8 @@ class Point(object):
     def move_by(self,dx,dy):
         self.x = self.x + dx
         self.y = self.y + dy
+
+    def
 
 
 
