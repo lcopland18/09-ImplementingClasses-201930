@@ -19,7 +19,7 @@ def main():
     run_test_get_distance_from()
     run_test_get_distance_from_start()
     run_test_get_distance_traveled()
-    # run_test_closer_to()
+    run_test_closer_to()
     # run_test_halfway_to()
 
 ###############################################################################
@@ -99,6 +99,13 @@ class Point(object):
     def get_distance_traveled(self):
         return self.distance
 
+    def closer_to(self,p2,p3):
+        self_p2 = math.sqrt((self.x - p2.x)**2 + (self.y - p2.y)**2)
+        self_p3 = math.sqrt((self.x - p3.x)**2 + (self.y - p3.y)**2)
+        if self_p2 > self_p3:
+            return p3
+        else:
+            return p2
 
 
 def run_test_init():
