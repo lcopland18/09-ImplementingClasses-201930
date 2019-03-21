@@ -13,8 +13,8 @@ def main():
     run_test_init()
     run_test_repr()
     run_test_clone()
-    # run_test_move_to()
-    # run_test_move_by()
+    run_test_move_to()
+    run_test_move_by()
     # run_test_get_number_of_moves_made()
     # run_test_get_distance_from()
     # run_test_get_distance_from_start()
@@ -55,6 +55,17 @@ class Point(object):
     def __repr__(self):
         return 'Point({}, {})'.format(self.x,self.y)
 
+    def clone(self):
+        return Point(self.x,self.y)
+
+    def move_to(self,x,y):
+        self.x = x
+        self.y = y
+        return self
+
+    def move_by(self,dx,dy):
+        self.x = self.x + dx
+        self.y = self.y + dy
 
 
 
